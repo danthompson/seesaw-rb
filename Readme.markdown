@@ -25,7 +25,7 @@ A client takes an optional access token when you initialize it. If you don't pro
 ``` ruby
 > client = Seesaw::Client.new(access_token: 'your_access_token')
 > current_user = client.me
-> me.username
+> current_user.username
 #=> "soffes"
 > decision = client.decision(5, 3276)
 #=> "Which lamp for the new apartment?"
