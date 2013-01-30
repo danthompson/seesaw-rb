@@ -7,12 +7,14 @@ require 'hashie'
 require 'seesaw/client/users'
 require 'seesaw/client/decisions'
 require 'seesaw/client/slugs'
+require 'seesaw/client/timelines'
 
 module Seesaw
   class Client
     include Seesaw::Client::Decisions
     include Seesaw::Client::Users
     include Seesaw::Client::Slugs
+    include Seesaw::Client::Timelines
 
     attr_reader :access_token
     attr_reader :api_scheme
