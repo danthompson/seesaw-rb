@@ -26,11 +26,11 @@ class ClientTest < SeesawTest
     refute client.ssl?
   end
 
-  def test_user
-    VCR.use_cassette 'client_user' do
+  def test_me
+    VCR.use_cassette 'client_me' do
       client = Seesaw::Client.new('9774e653f7b3c1de5f21b61adc08ba24', api_host: 'localhost:5000', api_scheme: 'http')
-      user = client.user
-      assert_equal 'test123', user['username']
+      user = client.me
+      assert_equal 'test123', user.username
     end
   end
 end

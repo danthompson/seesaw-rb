@@ -18,4 +18,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
 
   gem.add_dependency 'multi_json'
+  gem.add_dependency 'hashie', '~> 1.2.0'
 end

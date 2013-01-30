@@ -2,6 +2,7 @@ require 'net/http'
 require 'net/https'
 require 'uri'
 require 'multi_json'
+require 'hashie'
 
 module Seesaw
   class Client
@@ -29,8 +30,8 @@ module Seesaw
       @api_scheme == 'https'
     end
 
-    def user
-      get 'me'
+    def me
+      get('me')
     end
 
   private
@@ -55,7 +56,7 @@ module Seesaw
       response = http.request(request)
 
       # Parse
-      MultiJson.load(response.body)
+      Hashie::Mash.new MultiJson.load(response.body)
     end
   end
 end
