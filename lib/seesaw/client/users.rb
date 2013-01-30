@@ -19,8 +19,8 @@ module Seesaw
       # @return [Hashie::Mash]
       # @example
       #   Seesaw.user('soffes')
-      def user(username_or_id)
-        get "users/#{username_or_id}"
+      def user(user)
+        get "users/#{user}"
       end
 
       # Follow a user.
@@ -32,8 +32,8 @@ module Seesaw
       # @see Seesaw::Client
       # @example
       #   client.follow('gotwalt')
-      def follow(username_or_id)
-        boolean_from_response :post, "users/#{username_or_id}/follow"
+      def follow(user)
+        boolean_from_response :post, "users/#{user}/follow"
       end
 
       # Unfollow a user.
@@ -45,8 +45,8 @@ module Seesaw
       # @see Seesaw::Client
       # @example
       #   client.unfollow('kyle')
-      def unfollow(username_or_id)
-        boolean_from_response :post, "users/#{username_or_id}/unfollow"
+      def unfollow(user)
+        boolean_from_response :post, "users/#{user}/unfollow"
       end
     end
   end

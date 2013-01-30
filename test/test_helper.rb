@@ -2,6 +2,9 @@ require 'rubygems'
 require 'bundler'
 Bundler.require :test
 
+require 'simplecov'
+SimpleCov.start
+
 require 'minitest/autorun'
 require 'seesaw'
 

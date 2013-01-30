@@ -36,8 +36,4 @@ A client takes an optional access token when you initialize it. If you don't pro
 
 ## Contributing
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+See the [contributing guide](https://github.com/seesawco/seesaw-rb/blob/master/Contributing.markdown).
