@@ -6,8 +6,8 @@ require 'seesaw/version'
 Gem::Specification.new do |gem|
   gem.name          = 'seesaw'
   gem.version       = Seesaw::VERSION
-  gem.authors       = ['Sam Soffes']
-  gem.email         = ['sam@soff.es']
+  gem.authors       = ['Sam Soffes', 'Aaron Gotwalt']
+  gem.email         = ['sam@soff.es', 'gotwalt@gmail.com']
   gem.description   = 'Ruby gem for working with the Seesaw API.'
   gem.summary       = gem.description
   gem.homepage      = 'https://github.com/seesawco/seesaw-rb'
