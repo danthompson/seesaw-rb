@@ -29,7 +29,6 @@ class ChoicesTest < Seesaw::TestCase
 
   def test_create_choice_upload
     VCR.use_cassette 'choices/create_choice_upload' do
-
       client = local_client
       decision = client.create_decision(1)
       choice = client.create_choice_upload(decision.user_id, decision.id)
@@ -46,5 +45,4 @@ class ChoicesTest < Seesaw::TestCase
       assert client.destroy_choice(decision.user_id, decision.id, choice.id)
     end
   end
-
 end

@@ -32,6 +32,9 @@ module Seesaw
   # Raised when Seesaw returns a 503 HTTP status code
   class ServiceUnavailable < Error; end
 
+  # Raised when a unique ID is required but not provided
+  class UniqueIDRequired < Error; end
+
   # Status code to exception map
   ERROR_MAP = {
     400 => Seesaw::BadRequest,

@@ -24,9 +24,13 @@ class UsersTest < Seesaw::TestCase
       # Still true, even if you aren't following them
       assert local_client.unfollow('gotwalt'), 'unfollow user twice'
 
-      # False if user isn't found
-      refute local_client.follow('nobody'), 'follow nobody'
-      refute local_client.follow('unnobody'), 'unfollow nobody'
+      assert_raises Seesaw::NotFound do
+        local_client.follow('nobody')
+      end
+
+      assert_raises Seesaw::NotFound do
+        refute local_client.follow('unnobody')
+      end
     end
   end
 end

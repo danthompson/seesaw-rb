@@ -1,0 +1,96 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.seesaw.co/v1/users/5/decisions/3276/votes
+    body:
+      encoding: UTF-8
+      string: ! '{"choice_id":5381,"unique_id":"021a997d8aa785abed0a25c47b9a07be"}'
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 30 Jan 2013 23:41:18 GMT
+      Etag:
+      - ! '"380b1c2aadcb06b0b3c3c006df2ec706"'
+      Server:
+      - thin 1.5.0 codename Knife
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - 910c33f18f74e972a8cc2b0070a2b5b8
+      X-Runtime:
+      - '0.071101'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"choice_id":5381,"created_at":"2013-01-30T23:41:18Z","decision_id":3276,"id":5432,"meta":null,"reason":null}'
+    http_version: 
+  recorded_at: Wed, 30 Jan 2013 23:41:17 GMT
+- request:
+    method: post
+    uri: https://api.seesaw.co/v1/users/5/decisions/3276/votes
+    body:
+      encoding: UTF-8
+      string: ! '{"choice_id":5381,"unique_id":"021a997d8aa785abed0a25c47b9a07be"}'
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 30 Jan 2013 23:41:18 GMT
+      Server:
+      - thin 1.5.0 codename Knife
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - 5736b4d2f98ef71c14b3c53fdedca28a
+      X-Runtime:
+      - '0.111517'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"error":"invalid_vote","error_description":"Vote has already been
+        recorded"}'
+    http_version: 
+  recorded_at: Wed, 30 Jan 2013 23:41:18 GMT
+recorded_with: VCR 2.4.0

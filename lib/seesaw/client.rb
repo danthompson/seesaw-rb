@@ -9,6 +9,7 @@ require 'seesaw/client/decisions'
 require 'seesaw/client/slugs'
 require 'seesaw/client/timelines'
 require 'seesaw/client/choices'
+require 'seesaw/client/votes'
 
 module Seesaw
   # API client for interacting with the Seesaw API
@@ -18,6 +19,7 @@ module Seesaw
     include Seesaw::Client::Slugs
     include Seesaw::Client::Timelines
     include Seesaw::Client::Choices
+    include Seesaw::Client::Votes
 
     attr_reader :access_token
     attr_reader :api_scheme
@@ -91,7 +93,15 @@ module Seesaw
       response = http.request(request)
 
       # Check for errors
-      raise error if error = Seesaw::ERROR_MAP[response.code]
+      error = Seesaw::ERROR_MAP[response.code.to_i]
+      if error
+        message = nil
+        begin
+          message = MultiJson.load(response.body)['error_description']
+        rescue MultiJson::DecodeError => e
+        end
+        raise error.new(message)
+      end
 
       response
     end
