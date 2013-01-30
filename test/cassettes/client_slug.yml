@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.seesaw.co/v1/slugs/d/3I0n0g
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 30 Jan 2013 06:12:50 GMT
+      Etag:
+      - ! '"5a7f1a4a696c907558885f2d5ad66550"'
+      Server:
+      - thin 1.5.0 codename Knife
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - 2835d25a5005bf3726d933f8f84bb107
+      X-Runtime:
+      - '0.292652'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"decision":{"created_at":"2013-01-24T15:44:24Z","final_vote_id":null,"flag_count":null,"id":3179,"is_private":false,"meta":{"question_display_text":"I
+        preordered a Lockitron. Which color should I get?","question_display_html":"I
+        preordered a Lockitron. Which color should I get?","question_entities":[]},"published_at":"2013-01-24T15:45:04Z","question":"I
+        preordered a Lockitron. Which color should I get?","updated_at":"2013-01-30T06:12:50Z","user_id":4,"pusher_channel":"decision-4-3179","timeline_key":"4,3179","analytics":{"views":499,"updated_at":"2013-01-30T06:12:50Z","comments":4,"unique_viewers":2,"referrers":{},"votes":{"5226":{"anonymous":71,"invited":2,"user":1,"total":74,"display_percentage":45},"5227":{"anonymous":58,"invited":3,"user":4,"total":65,"display_percentage":40},"5228":{"anonymous":21,"user":2,"total":23,"display_percentage":15}},"total_votes":162},"user_vote":{"choice_id":5227,"created_at":"2013-01-24T15:46:28Z","decision_id":3179,"id":3986,"meta":null,"reason":null,"user":{"biography":null,"created_at":"2012-11-13T22:44:25Z","family_name":null,"given_name":null,"id":4,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-24T15:46:20Z","username":"soffes","website":null,"avatar_url":"https://recess.s3.amazonaws.com/avatars/482/1354297369/photo.jpg","full_name":"soffes","short_name":"soffes","display_name":"soffes","short_display_name":"soffes","analytics":{"votes":93,"decisions":7,"following":12,"followers":17,"updated_at":"2013-01-24T15:46:28Z"}}},"choices":[{"created_at":"2013-01-24T15:44:24Z","decision_id":3179,"decision_user_id":4,"id":5226,"meta":{"original_url":"https://lockitron.com/preorder/7388d18c-0cab-11e2-ad11-4040401f6100/choose?k=f7fd9084f93b549c15d34aa2f4911443#/seesaw-images"},"position":1,"subject":"Obsidian
+        Black","type":"ImageChoice","updated_at":"2013-01-24T15:44:24Z","image_uri":"https://recess.s3.amazonaws.com/decisions/3179/5226/1359042264/photo.png"},{"created_at":"2013-01-24T15:44:25Z","decision_id":3179,"decision_user_id":4,"id":5227,"meta":{"original_url":"https://lockitron.com/preorder/7388d18c-0cab-11e2-ad11-4040401f6100/choose?k=f7fd9084f93b549c15d34aa2f4911443#/seesaw-images"},"position":2,"subject":"Quicksilver","type":"ImageChoice","updated_at":"2013-01-24T15:44:25Z","image_uri":"https://recess.s3.amazonaws.com/decisions/3179/5227/1359042265/photo.png"},{"created_at":"2013-01-24T15:44:25Z","decision_id":3179,"decision_user_id":4,"id":5228,"meta":{"original_url":"https://lockitron.com/preorder/7388d18c-0cab-11e2-ad11-4040401f6100/choose?k=f7fd9084f93b549c15d34aa2f4911443#/seesaw-images"},"position":3,"subject":"Bondi
+        Blue","type":"ImageChoice","updated_at":"2013-01-24T15:44:25Z","image_uri":"https://recess.s3.amazonaws.com/decisions/3179/5228/1359042265/photo.png"}],"invitations":[{"created_at":"2013-01-24T15:45:04Z","id":961,"notification_type":"APN","sent_at":"2013-01-24T15:45:04Z","updated_at":"2013-01-24T17:26:52Z","slug_path":"i/251m07","user":{"biography":null,"created_at":"2012-12-11T21:49:45Z","family_name":"Davenport","given_name":"Caleb","id":116,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-25T18:53:39Z","username":"calebd","website":null,"avatar_url":"https://recess.s3.amazonaws.com/avatars/644/1357410680/photo.jpg","full_name":"Caleb
+        Davenport","short_name":"Caleb D","display_name":"calebd","short_display_name":"calebd","analytics":{"votes":90,"decisions":7,"following":20,"followers":18,"updated_at":"2013-01-25T19:23:12Z"}},"vote":{"choice_id":5226,"created_at":"2013-01-24T15:48:26Z","decision_id":3179,"id":4007,"meta":null,"reason":null,"user":{"biography":null,"created_at":"2012-12-11T21:49:45Z","family_name":"Davenport","given_name":"Caleb","id":116,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-25T18:53:39Z","username":"calebd","website":null,"avatar_url":"https://recess.s3.amazonaws.com/avatars/644/1357410680/photo.jpg","full_name":"Caleb
+        Davenport","short_name":"Caleb D","display_name":"calebd","short_display_name":"calebd","analytics":{"votes":90,"decisions":7,"following":20,"followers":18,"updated_at":"2013-01-25T19:23:12Z"}}}},{"created_at":"2013-01-24T15:45:04Z","id":960,"notification_type":"APN","sent_at":"2013-01-24T15:45:05Z","updated_at":"2013-01-24T17:29:19Z","slug_path":"i/2d0z1u","user":{"biography":null,"created_at":"2012-11-13T22:45:39Z","family_name":"Engle","given_name":"Jesse","id":3,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-25T18:04:50Z","username":"jesse","website":null,"avatar_url":"https://recess.s3.amazonaws.com/avatars/743/1358907256/photo.jpg","full_name":"Jesse
+        Engle","short_name":"Jesse E","display_name":"jesse","short_display_name":"jesse","analytics":{"votes":161,"decisions":48,"following":67,"followers":61,"updated_at":"2013-01-25T17:39:18Z"}},"vote":{"choice_id":5226,"created_at":"2013-01-24T17:29:19Z","decision_id":3179,"id":4089,"meta":null,"reason":null,"user":{"biography":null,"created_at":"2012-11-13T22:45:39Z","family_name":"Engle","given_name":"Jesse","id":3,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-25T18:04:50Z","username":"jesse","website":null,"avatar_url":"https://recess.s3.amazonaws.com/avatars/743/1358907256/photo.jpg","full_name":"Jesse
+        Engle","short_name":"Jesse E","display_name":"jesse","short_display_name":"jesse","analytics":{"votes":161,"decisions":48,"following":67,"followers":61,"updated_at":"2013-01-25T17:39:18Z"}}}},{"created_at":"2013-01-24T15:45:04Z","id":959,"notification_type":"APN","sent_at":"2013-01-24T15:45:05Z","updated_at":"2013-01-24T15:47:35Z","slug_path":"i/1N040r","user":{"biography":null,"created_at":"2012-11-13T22:40:33Z","family_name":"Gotwalt","given_name":"Aaron","id":1,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-25T03:02:01Z","username":"gotwalt","website":null,"avatar_url":"https://recess.s3.amazonaws.com/avatars/530/1355442979/photo.jpg","full_name":"Aaron
+        Gotwalt","short_name":"Aaron G","display_name":"gotwalt","short_display_name":"gotwalt","analytics":{"votes":110,"decisions":15,"following":19,"followers":38,"updated_at":"2013-01-25T17:23:37Z"}},"vote":{"choice_id":5227,"created_at":"2013-01-24T15:47:35Z","decision_id":3179,"id":3998,"meta":null,"reason":null,"user":{"biography":null,"created_at":"2012-11-13T22:40:33Z","family_name":"Gotwalt","given_name":"Aaron","id":1,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-25T03:02:01Z","username":"gotwalt","website":null,"avatar_url":"https://recess.s3.amazonaws.com/avatars/530/1355442979/photo.jpg","full_name":"Aaron
+        Gotwalt","short_name":"Aaron G","display_name":"gotwalt","short_display_name":"gotwalt","analytics":{"votes":110,"decisions":15,"following":19,"followers":38,"updated_at":"2013-01-25T17:23:37Z"}}}},{"created_at":"2013-01-24T15:45:04Z","id":958,"notification_type":"APN","sent_at":"2013-01-24T15:45:05Z","updated_at":"2013-01-24T15:46:08Z","slug_path":"i/2o3s1A","user":{"biography":null,"created_at":"2012-11-13T22:44:41Z","family_name":"Sollenberger","given_name":"Kyle","id":2,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-25T18:45:14Z","username":"kyle","website":null,"avatar_url":"https://recess.s3.amazonaws.com/avatars/706/1358537269/photo.jpg","full_name":"Kyle
+        Sollenberger","short_name":"Kyle S","display_name":"kyle","short_display_name":"kyle","analytics":{"votes":223,"decisions":32,"following":33,"followers":43,"updated_at":"2013-01-25T18:46:33Z"}},"vote":{"choice_id":5227,"created_at":"2013-01-24T15:46:08Z","decision_id":3179,"id":3984,"meta":null,"reason":null,"user":{"biography":null,"created_at":"2012-11-13T22:44:41Z","family_name":"Sollenberger","given_name":"Kyle","id":2,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-25T18:45:14Z","username":"kyle","website":null,"avatar_url":"https://recess.s3.amazonaws.com/avatars/706/1358537269/photo.jpg","full_name":"Kyle
+        Sollenberger","short_name":"Kyle S","display_name":"kyle","short_display_name":"kyle","analytics":{"votes":223,"decisions":32,"following":33,"followers":43,"updated_at":"2013-01-25T18:46:33Z"}}}},{"created_at":"2013-01-24T15:45:04Z","id":957,"notification_type":"APN","sent_at":"2013-01-24T15:45:05Z","updated_at":"2013-01-24T20:09:59Z","slug_path":"i/2Y1P3T","user":{"biography":null,"created_at":"2012-11-13T22:42:41Z","family_name":null,"given_name":null,"id":5,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-25T16:18:23Z","username":"adam","website":null,"avatar_url":"https://recess.s3.amazonaws.com/avatars/708/1358717126/photo.jpg","full_name":"adam","short_name":"adam","display_name":"adam","short_display_name":"adam","analytics":{"votes":190,"decisions":14,"following":30,"followers":30,"updated_at":"2013-01-25T16:26:34Z"}},"vote":{"choice_id":5227,"created_at":"2013-01-24T20:09:59Z","decision_id":3179,"id":4139,"meta":null,"reason":null,"user":{"biography":null,"created_at":"2012-11-13T22:42:41Z","family_name":null,"given_name":null,"id":5,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-25T16:18:23Z","username":"adam","website":null,"avatar_url":"https://recess.s3.amazonaws.com/avatars/708/1358717126/photo.jpg","full_name":"adam","short_name":"adam","display_name":"adam","short_display_name":"adam","analytics":{"votes":190,"decisions":14,"following":30,"followers":30,"updated_at":"2013-01-25T16:26:34Z"}}}}],"user":{"biography":null,"created_at":"2012-11-13T22:44:25Z","family_name":null,"given_name":null,"id":4,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-24T15:46:20Z","username":"soffes","website":null,"avatar_url":"https://recess.s3.amazonaws.com/avatars/482/1354297369/photo.jpg","full_name":"soffes","short_name":"soffes","display_name":"soffes","short_display_name":"soffes","analytics":{"votes":93,"decisions":7,"following":12,"followers":17,"updated_at":"2013-01-24T15:46:28Z"}},"slug":"d/3I0n0g","comments":[{"created_at":"2013-01-24T15:46:51Z","decision_id":3179,"decision_user_id":4,"id":273,"message":"More
+        info at http://lockitron.com","meta":{"message_display_text":"More info at
+        lockitron.com","message_display_html":"More info at <a href=\"http://lockitron.com\"
+        rel=\"external nofollow\" class=\"link\">lockitron.com</a>","message_entities":[{"type":"link","text":"http://lockitron.com","display_text":"lockitron.com","url":"http://lockitron.com","indices":[13,33],"display_indices":[13,26]}]},"user":{"biography":null,"created_at":"2012-11-13T22:44:25Z","family_name":null,"given_name":null,"id":4,"meta":null,"updated_at":"2013-01-24T15:46:20Z","username":"soffes","website":null,"avatar_url":"https://recess.s3.amazonaws.com/avatars/482/1354297369/photo.jpg","full_name":"soffes","short_name":"soffes","display_name":"soffes","short_display_name":"soffes","analytics":{"votes":93,"decisions":7,"following":12,"followers":17,"updated_at":"2013-01-24T15:46:28Z"}}},{"created_at":"2013-01-24T15:48:23Z","decision_id":3179,"decision_user_id":4,"id":274,"message":"Definitely
+        digging the brushed metal look of quicksilver.","meta":{"message_display_text":"Definitely
+        digging the brushed metal look of quicksilver.","message_display_html":"Definitely
+        digging the brushed metal look of quicksilver.","message_entities":[]},"user":{"biography":null,"created_at":"2012-11-13T22:44:41Z","family_name":"Sollenberger","given_name":"Kyle","id":2,"meta":null,"updated_at":"2013-01-24T15:45:04Z","username":"kyle","website":null,"avatar_url":"https://recess.s3.amazonaws.com/avatars/706/1358537269/photo.jpg","full_name":"Kyle
+        Sollenberger","short_name":"Kyle S","display_name":"kyle","short_display_name":"kyle","analytics":{"votes":217,"decisions":30,"following":33,"followers":43,"updated_at":"2013-01-24T15:46:09Z"}}},{"created_at":"2013-01-24T15:49:47Z","decision_id":3179,"decision_user_id":4,"id":275,"message":"@kyle
+        pretty sure that''s what I''ll get","meta":{"message_display_text":"@kyle
+        pretty sure that''s what I''ll get","message_display_html":"<a href=\"https://seesaw.co/kyle\"
+        class=\"user\">@kyle</a> pretty sure that''s what I''ll get","message_entities":[{"type":"user","text":"@kyle","display_text":"@kyle","indices":[0,5],"username":"kyle","user_id":2,"display_indices":[0,5]}]},"user":{"biography":null,"created_at":"2012-11-13T22:44:25Z","family_name":null,"given_name":null,"id":4,"meta":null,"updated_at":"2013-01-24T15:46:20Z","username":"soffes","website":null,"avatar_url":"https://recess.s3.amazonaws.com/avatars/482/1354297369/photo.jpg","full_name":"soffes","short_name":"soffes","display_name":"soffes","short_display_name":"soffes","analytics":{"votes":93,"decisions":7,"following":12,"followers":17,"updated_at":"2013-01-24T15:46:28Z"}}},{"created_at":"2013-01-24T16:44:00Z","decision_id":3179,"decision_user_id":4,"id":276,"message":"I
+        didn''t even know something like this existed. What an awesome idea!","meta":{"message_display_text":"I
+        didn''t even know something like this existed. What an awesome idea!","message_display_html":"I
+        didn''t even know something like this existed. What an awesome idea!","message_entities":[]},"user":{"biography":null,"created_at":"2012-12-11T21:49:45Z","family_name":"Davenport","given_name":"Caleb","id":116,"meta":null,"updated_at":"2013-01-24T16:23:19Z","username":"calebd","website":null,"avatar_url":"https://recess.s3.amazonaws.com/avatars/644/1357410680/photo.jpg","full_name":"Caleb
+        Davenport","short_name":"Caleb D","display_name":"calebd","short_display_name":"calebd","analytics":{"votes":82,"decisions":7,"following":19,"followers":17,"updated_at":"2013-01-24T15:48:26Z"}}}]},"invitation":null}'
+    http_version: 
+  recorded_at: Wed, 30 Jan 2013 06:12:51 GMT
+recorded_with: VCR 2.4.0

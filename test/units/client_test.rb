@@ -41,4 +41,12 @@ class ClientTest < SeesawTest
       assert_equal 'Which lamp for the new apartment?', decision.question
     end
   end
+
+  def test_slug
+    VCR.use_cassette 'client_slug' do
+      client = Seesaw::Client.new
+      slug = client.slug('d/3I0n0g')
+      assert_equal 'soffes', slug.decision.user.username
+    end
+  end
 end

@@ -38,6 +38,10 @@ module Seesaw
       get "users/#{user_id}/decisions/#{decision_id}"
     end
 
+    def slug(id)
+      get "slugs/#{id}"
+    end
+
   private
 
     def http
