@@ -84,7 +84,11 @@ module Seesaw
       response = request(*args)
 
       # Parse
-      Hashie::Mash.new MultiJson.load(response.body)
+      object = MultiJson.load(response.body)
+      return Hashie::Mash.new(object) if object.is_a? Hash
+      return object.map { |h| Hashie::Mash.new(h) } if object.is_a? Array
+
+      object
     end
 
     def boolean_from_response(*args)
