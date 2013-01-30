@@ -1,5 +1,6 @@
 module Seesaw
   class Client
+    # Client methods for working with slugs
     module Slugs
       # Get a slug.
       #

@@ -1,5 +1,6 @@
 module Seesaw
   class Client
+    # Client methods for working with users
     module Users
       # Get the current user
       #

@@ -1,5 +1,6 @@
 module Seesaw
   class Client
+    # Client methods for working with choices
     module Choices
       # Get a single choice
       #

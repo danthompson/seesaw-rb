@@ -11,6 +11,7 @@ require 'seesaw/client/timelines'
 require 'seesaw/client/choices'
 
 module Seesaw
+  # API client for interacting with the Seesaw API
   class Client
     include Seesaw::Client::Decisions
     include Seesaw::Client::Users
@@ -23,6 +24,9 @@ module Seesaw
     attr_reader :api_host
     attr_reader :api_version
 
+    # Initialize a new client.
+    #
+    # @param options [Hash] optionally specify `:access_token`, `:api_scheme`, `:api_host`, or `:api_version`
     def initialize(options = {})
       options = { access_token: options } if options.is_a? String
 
@@ -32,14 +36,23 @@ module Seesaw
       @api_version = (options[:api_version] or 1)
     end
 
+    # API base URL.
+    #
+    # @return [String] API base URL
     def base_url
       "#{@api_scheme}://#{@api_host}/v#{@api_version}/"
     end
 
+    # Is the client has an access token.
+    #
+    # @return [Boolean] true if it is using one and false if it is not
     def authenticated?
       @access_token != nil and @access_token.length > 0
     end
 
+    # Is the client using SSL.
+    #
+    # @return [Boolean] true if it is using SSL and false if it is not
     def ssl?
       @api_scheme == 'https'
     end

@@ -1,5 +1,6 @@
 module Seesaw
   class Client
+    # Client methods for working with decisions
     module Decisions
       # Get a single decision
       #

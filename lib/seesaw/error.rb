@@ -1,4 +1,5 @@
 module Seesaw
+  # Standard Seesaw error
   class Error < StandardError; end
 
   # Raised when Seesaw returns a 400 HTTP status code
@@ -31,6 +32,7 @@ module Seesaw
   # Raised when Seesaw returns a 503 HTTP status code
   class ServiceUnavailable < Error; end
 
+  # Status code to exception map
   ERROR_MAP = {
     400 => Seesaw::BadRequest,
     401 => Seesaw::Unauthorized,

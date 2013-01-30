@@ -1,5 +1,6 @@
 module Seesaw
   class Client
+    # Client methods for working with timelines
     module Timelines
       # Get recent decisions from the global timeline.
       #

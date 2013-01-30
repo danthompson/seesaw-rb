@@ -2,6 +2,7 @@ require 'seesaw/version'
 require 'seesaw/client'
 require 'seesaw/error'
 
+# Seesaw Ruby library for working with the API
 module Seesaw
   class << self
     # Alias for Seesaw::Client.new
@@ -17,6 +18,7 @@ module Seesaw
       new.send(method, *args, &block)
     end
 
+    # Forward respond_to? to Seesaw::Client.new
     def respond_to?(method, include_private = false)
       new.respond_to?(method, include_private) || super(method, include_private)
     end
