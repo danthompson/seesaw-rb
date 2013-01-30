@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.seesaw.co/v1/users/gotwalt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 30 Jan 2013 16:10:55 GMT
+      Etag:
+      - ! '"4a15d340e2051046340cd2fc1443cba1"'
+      Server:
+      - thin 1.5.0 codename Knife
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - 008de3c6c1b64956f4c0518074b15acb
+      X-Runtime:
+      - '0.009899'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"biography":null,"created_at":"2012-11-13T22:40:33Z","family_name":"Gotwalt","given_name":"Aaron","id":1,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-30T15:01:17Z","username":"gotwalt","website":null,"avatar_url":"https://recess.s3.amazonaws.com/avatars/530/1355442979/photo.jpg","full_name":"Aaron
+        Gotwalt","short_name":"Aaron G","display_name":"gotwalt","short_display_name":"gotwalt","analytics":{"votes":133,"decisions":17,"following":19,"followers":39,"updated_at":"2013-01-30T15:01:00Z"}}'
+    http_version: 
+  recorded_at: Wed, 30 Jan 2013 16:10:56 GMT
+recorded_with: VCR 2.4.0

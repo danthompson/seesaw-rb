@@ -1,0 +1,194 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5000/v1/users/gotwalt/follow
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer 9774e653f7b3c1de5f21b61adc08ba24
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"8581d84acadd6b876bb85cf6d7514dd4"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3df84fd3c50941ecc4673598a411d8ab
+      X-Runtime:
+      - '0.033533'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.0 codename Knife
+    body:
+      encoding: US-ASCII
+      string: ! '{"user":{"biography":null,"created_at":"2013-01-30T16:10:13Z","family_name":null,"given_name":null,"id":3,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-30T16:26:25Z","username":"gotwalt","website":null,"avatar_url":"https://recess-dev.s3.amazonaws.com/default_avatars/v1/photo_4.png","full_name":"gotwalt","short_name":"gotwalt","display_name":"gotwalt","short_display_name":"gotwalt","analytics":{"followers":0,"updated_at":"2013-01-30T16:26:25Z","votes":0,"decisions":0,"following":0}},"following":true,"follower":false}'
+    http_version: 
+  recorded_at: Wed, 30 Jan 2013 16:27:43 GMT
+- request:
+    method: post
+    uri: http://localhost:5000/v1/users/gotwalt/unfollow
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer 9774e653f7b3c1de5f21b61adc08ba24
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"f1142059cd62370bc187832a56bd1a59"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bcf74be8e60cf48bfd30588363bd32c7
+      X-Runtime:
+      - '0.027160'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.0 codename Knife
+    body:
+      encoding: US-ASCII
+      string: ! '{"user":{"biography":null,"created_at":"2013-01-30T16:10:13Z","family_name":null,"given_name":null,"id":3,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-30T16:27:43Z","username":"gotwalt","website":null,"avatar_url":"https://recess-dev.s3.amazonaws.com/default_avatars/v1/photo_4.png","full_name":"gotwalt","short_name":"gotwalt","display_name":"gotwalt","short_display_name":"gotwalt","analytics":{"followers":0,"updated_at":"2013-01-30T16:26:25Z","votes":0,"decisions":0,"following":0}},"following":false,"follower":false}'
+    http_version: 
+  recorded_at: Wed, 30 Jan 2013 16:27:43 GMT
+- request:
+    method: post
+    uri: http://localhost:5000/v1/users/gotwalt/unfollow
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer 9774e653f7b3c1de5f21b61adc08ba24
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"c7e467a38cdaea95ccbff6aa3e3056e6"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 514a9f897ca1c31c6b65eb0c85e62a64
+      X-Runtime:
+      - '0.084622'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.0 codename Knife
+    body:
+      encoding: US-ASCII
+      string: ! '{"user":{"biography":null,"created_at":"2013-01-30T16:10:13Z","family_name":null,"given_name":null,"id":3,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-30T16:27:43Z","username":"gotwalt","website":null,"avatar_url":"https://recess-dev.s3.amazonaws.com/default_avatars/v1/photo_4.png","full_name":"gotwalt","short_name":"gotwalt","display_name":"gotwalt","short_display_name":"gotwalt","analytics":{"followers":1,"updated_at":"2013-01-30T16:27:43Z","votes":0,"decisions":0,"following":0}},"following":false,"follower":false}'
+    http_version: 
+  recorded_at: Wed, 30 Jan 2013 16:27:43 GMT
+- request:
+    method: post
+    uri: http://localhost:5000/v1/users/nobody/follow
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer 9774e653f7b3c1de5f21b61adc08ba24
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 0fc781c9f9b94aedf0f72e8f43eb8006
+      X-Runtime:
+      - '0.010066'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.0 codename Knife
+    body:
+      encoding: US-ASCII
+      string: ! '{"error":"not_found","error_description":"Record not found."}'
+    http_version: 
+  recorded_at: Wed, 30 Jan 2013 16:27:43 GMT
+- request:
+    method: post
+    uri: http://localhost:5000/v1/users/unnobody/follow
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer 9774e653f7b3c1de5f21b61adc08ba24
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 1d6d970033c12098c1e1980d8a6bfc42
+      X-Runtime:
+      - '0.008839'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.0 codename Knife
+    body:
+      encoding: US-ASCII
+      string: ! '{"error":"not_found","error_description":"Record not found."}'
+    http_version: 
+  recorded_at: Wed, 30 Jan 2013 16:27:43 GMT
+recorded_with: VCR 2.4.0

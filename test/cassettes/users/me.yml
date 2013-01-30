@@ -27,9 +27,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 34154b576dfc0843605598030360bf11
+      - 28038b85d34b3e315b81dfde649c2b0c
       X-Runtime:
-      - '0.020060'
+      - '0.678551'
       Connection:
       - close
       Server:
@@ -39,5 +39,5 @@ http_interactions:
       string: ! '{"biography":null,"created_at":"2013-01-25T21:06:59Z","email":"test@seesaw.co","family_name":null,"given_name":null,"id":1,"meta":null,"phone_number":"+12147093337","preferences":{"notification_friends":false,"notification_invitee_votes":true,"notification_comments":true,"notification_following_votes":true,"notification_other_votes":true,"notification_after_votes":false,"notification_following":true,"opt_in_to_sms":true},"updated_at":"2013-01-29T23:39:18Z","username":"test123","website":null,"avatar_url":"https://recess-dev.s3.amazonaws.com/default_avatars/v1/photo_1.png","full_name":"test123","short_name":"test123","display_name":"test123","short_display_name":"test123","analytics":{"votes":0,"decisions":0,"followers":0,"following":0},"formatted_phone_number":"(214)
         709-3337","roles":[],"default_timeline":"g"}'
     http_version: 
-  recorded_at: Wed, 30 Jan 2013 01:59:31 GMT
+  recorded_at: Wed, 30 Jan 2013 15:45:06 GMT
 recorded_with: VCR 2.4.0

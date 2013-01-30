@@ -25,7 +25,7 @@ Or install it yourself as:
 A client takes an optional access token when you initialize it. If you don't provide one, you can still use it to make unauthenticated requests. If you do provide one, it will set the authorization header for all requests.
 
 ``` ruby
-> client = Seesaw::Client.new(your_access_token)
+> client = Seesaw::Client.new(access_token: 'your_access_token')
 > current_user = client.me
 > me.username
 #=> "soffes"

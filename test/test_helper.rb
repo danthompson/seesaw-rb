@@ -16,5 +16,6 @@ VCR.configure do |c|
   c.hook_into :webmock
 end
 
-class SeesawTest < MiniTest::Unit::TestCase
+class Seesaw::TestCase < MiniTest::Unit::TestCase
+  include ::ClientMacros
 end
