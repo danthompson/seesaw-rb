@@ -39,7 +39,7 @@ module Seesaw
       # @param decision_id [Numeric] The decision's id
       # @return [Boolean] True if follow was successful, false otherwise.
       # @example
-      #   Seesaw.destroy(1, 1)
+      #   Seesaw.destroy_decision(1, 1)
       def destroy_decision(user_id, decision_id)
         boolean_from_response :delete, "users/#{user_id}/decisions/#{decision_id}"
       end

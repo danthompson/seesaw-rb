@@ -44,6 +44,30 @@ module Seesaw
 
         post "users/#{user_id}/decisions/#{decision_id}/choices", data
       end
+
+      # Create a new choice upload. Resulting hash contains an #upload parameter
+      # providing keys necessary to perform a signed S3 upload.
+      #
+      # @param user_id [Numeric] The choice's decision's user id
+      # @param decision_id [Numeric] The choice's decision's id
+      # @return [Hashie::Mash]
+      # @example
+      #   Seesaw.create_choice_upload(1, 1)
+      def create_choice_upload(user_id, decision_id)
+        post "users/#{user_id}/decisions/#{decision_id}/choices"
+      end
+
+      # Destroy a choice
+      #
+      # @param user_id [Numeric] The choice's decision's user id
+      # @param decision_id [Numeric] The choice's decision's id
+      # @param choice_id [Numeric] The choice's id
+      # @return [Boolean] True if follow was successful, false otherwise.
+      # @example
+      #   Seesaw.destroy_choice(1, 1)
+      def destroy_choice(user_id, decision_id, choice_id)
+        boolean_from_response :delete, "users/#{user_id}/decisions/#{decision_id}/choices/#{choice_id}"
+      end
     end
   end
 end

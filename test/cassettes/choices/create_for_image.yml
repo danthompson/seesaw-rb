@@ -25,25 +25,25 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge
       Etag:
-      - ! '"f8463ac3f444cf98a06faff3d73307cb"'
+      - ! '"17c9b6356fae36d9b359dd0e2e56915f"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 529095102c5423271ae495ee1fd27f90
+      - fddf25eccf2dea50779bcc1268429bea
       X-Runtime:
-      - '0.027524'
+      - '0.075714'
       Connection:
       - close
       Server:
       - thin 1.5.0 codename Knife
     body:
       encoding: US-ASCII
-      string: ! '{"created_at":"2013-01-30T20:45:52Z","final_vote_id":null,"flag_count":null,"id":17,"is_private":false,"meta":null,"published_at":null,"question":null,"updated_at":"2013-01-30T20:45:52Z","user_id":1,"pusher_channel":"decision-1-17","timeline_key":"1,17","analytics":{"views":0,"unique_viewers":0,"referrers":{},"votes":{},"total_votes":0},"user_vote":null,"choices":[],"invitations":[],"user":{"biography":null,"created_at":"2013-01-23T03:22:06Z","family_name":null,"given_name":null,"id":1,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-23T03:22:06Z","username":null,"website":null,"avatar_url":"https://recess-dev.s3.amazonaws.com/default_avatars/v1/photo_1.png","full_name":"1","short_name":"1","display_name":"1","short_display_name":"1","analytics":{"votes":0,"decisions":0,"followers":0,"following":0}},"slug":"d/0v0V3B"}'
+      string: ! '{"created_at":"2013-01-30T21:44:41Z","final_vote_id":null,"flag_count":null,"id":33,"is_private":false,"meta":null,"published_at":null,"question":null,"updated_at":"2013-01-30T21:44:41Z","user_id":1,"pusher_channel":"decision-1-33","timeline_key":"1,33","analytics":{"views":0,"unique_viewers":0,"referrers":{},"votes":{},"total_votes":0},"user_vote":null,"choices":[],"invitations":[],"user":{"biography":null,"created_at":"2013-01-23T03:22:06Z","family_name":null,"given_name":null,"id":1,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-23T03:22:06Z","username":null,"website":null,"avatar_url":"https://recess-dev.s3.amazonaws.com/default_avatars/v1/photo_1.png","full_name":"1","short_name":"1","display_name":"1","short_display_name":"1","analytics":{"votes":0,"decisions":0,"followers":0,"following":0}},"slug":"d/1W362T"}'
     http_version: 
-  recorded_at: Wed, 30 Jan 2013 20:45:52 GMT
+  recorded_at: Wed, 30 Jan 2013 21:44:41 GMT
 - request:
     method: post
-    uri: http://localhost:5000/v1/users/1/decisions/17/choices
+    uri: http://localhost:5000/v1/users/1/decisions/33/choices
     body:
       encoding: UTF-8
       string: ! '{"choice":{"type":"image","image_url":"http://recess.s3.amazonaws.com/default_avatars/v1/photo_1.png","subject":"Test
@@ -67,21 +67,21 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge
       Etag:
-      - ! '"4c11a6d58f47caa419e9579237334f79"'
+      - ! '"6bd2e538cb6c096628df5e5e8c52b8bb"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e6c45352b1d35980b60a970a95398d1e
+      - 6cab0f1f8d22dedc4920106aed2852ff
       X-Runtime:
-      - '0.262825'
+      - '0.604433'
       Connection:
       - close
       Server:
       - thin 1.5.0 codename Knife
     body:
       encoding: US-ASCII
-      string: ! '{"created_at":"2013-01-30T20:45:52Z","decision_id":17,"decision_user_id":1,"id":4,"meta":{"link_url":"http://seesaw.co","link_title":"Seesaw"},"position":1,"subject":"Test
-        Image","type":"ImageChoice","updated_at":"2013-01-30T20:45:52Z","image_uri":"https://recess-dev.s3.amazonaws.com/gotwalt-pro.sf.gotwalt.com/decisions/17/4/1359578752/photo.png"}'
+      string: ! '{"created_at":"2013-01-30T21:44:41Z","decision_id":33,"decision_user_id":1,"id":20,"meta":{"link_url":"http://seesaw.co","link_title":"Seesaw"},"position":1,"subject":"Test
+        Image","type":"ImageChoice","updated_at":"2013-01-30T21:44:41Z","image_uri":"https://recess-dev.s3.amazonaws.com/gotwalt-pro.sf.gotwalt.com/decisions/33/20/1359582281/photo.png"}'
     http_version: 
-  recorded_at: Wed, 30 Jan 2013 20:45:52 GMT
+  recorded_at: Wed, 30 Jan 2013 21:44:41 GMT
 recorded_with: VCR 2.4.0

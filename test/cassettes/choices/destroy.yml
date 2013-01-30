@@ -1,0 +1,122 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5000/v1/users/1/decisions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer 9774e653f7b3c1de5f21b61adc08ba24
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"a065c212f634cce169159f9e66c40e42"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 11b81d00325361beeb6dda08b5eca88d
+      X-Runtime:
+      - '0.027600'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.0 codename Knife
+    body:
+      encoding: US-ASCII
+      string: ! '{"created_at":"2013-01-30T21:45:41Z","final_vote_id":null,"flag_count":null,"id":34,"is_private":false,"meta":null,"published_at":null,"question":null,"updated_at":"2013-01-30T21:45:41Z","user_id":1,"pusher_channel":"decision-1-34","timeline_key":"1,34","analytics":{"views":0,"unique_viewers":0,"referrers":{},"votes":{},"total_votes":0},"user_vote":null,"choices":[],"invitations":[],"user":{"biography":null,"created_at":"2013-01-23T03:22:06Z","family_name":null,"given_name":null,"id":1,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-23T03:22:06Z","username":null,"website":null,"avatar_url":"https://recess-dev.s3.amazonaws.com/default_avatars/v1/photo_1.png","full_name":"1","short_name":"1","display_name":"1","short_display_name":"1","analytics":{"votes":0,"decisions":0,"followers":0,"following":0}},"slug":"d/3H2Y0T"}'
+    http_version: 
+  recorded_at: Wed, 30 Jan 2013 21:45:42 GMT
+- request:
+    method: post
+    uri: http://localhost:5000/v1/users/1/decisions/34/choices
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer 9774e653f7b3c1de5f21b61adc08ba24
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"ee3e37e9de385d6218a89aa990e974a7"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d89c73e6a43d0a2deb90538b92533b0f
+      X-Runtime:
+      - '0.021898'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.0 codename Knife
+    body:
+      encoding: US-ASCII
+      string: ! '{"created_at":"2013-01-30T21:45:42Z","decision_id":34,"decision_user_id":1,"id":21,"meta":null,"position":1,"subject":null,"type":"ImageChoice","updated_at":"2013-01-30T21:45:42Z","image_uri":"https://s3.amazonaws.com/","upload":{"url":"https://recess-dev.s3.amazonaws.com/","params":{"AWSAccessKeyId":"AKIAIYAL2IUDRW6PBPUQ","key":"gotwalt-pro.sf.gotwalt.com/decisions/34/21/1359582342/${filename}","policy":"eyJleHBpcmF0aW9uIjoiMjAxMy0wMS0zMFQyMjo0NTo0MloiLCJjb25kaXRpb25zIjpbeyJidWNrZXQiOiJyZWNlc3MtZGV2In0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJnb3R3YWx0LXByby5zZi5nb3R3YWx0LmNvbS9kZWNpc2lvbnMvMzQvMjEvMTM1OTU4MjM0Mi8iXSx7ImFjbCI6InB1YmxpYy1yZWFkIn0seyJzdWNjZXNzX2FjdGlvbl9yZWRpcmVjdCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMC92MS91c2Vycy8xL2RlY2lzaW9ucy8zNC9jaG9pY2VzLzN6MzgzRDJwM2szajJEMkkwVi9zMyJ9LFsiY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3Nl1dfQ==","signature":"L+fuJLNpquy1z/dQgkDFanvhEWY=","acl":"public-read","success_action_redirect":"http://localhost:5000/v1/users/1/decisions/34/choices/3z383D2p3k3j2D2I0V/s3"}}}'
+    http_version: 
+  recorded_at: Wed, 30 Jan 2013 21:45:42 GMT
+- request:
+    method: delete
+    uri: http://localhost:5000/v1/users/1/decisions/34/choices/21
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer 9774e653f7b3c1de5f21b61adc08ba24
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - a7961b4c7ba620f19eeab109ac8b2378
+      X-Runtime:
+      - '0.013544'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.0 codename Knife
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Wed, 30 Jan 2013 21:45:42 GMT
+recorded_with: VCR 2.4.0
