@@ -31,7 +31,11 @@ module Seesaw
     end
 
     def me
-      get('me')
+      get 'me'
+    end
+
+    def decision(user_id, decision_id)
+      get "users/#{user_id}/decisions/#{decision_id}"
     end
 
   private

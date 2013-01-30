@@ -33,4 +33,12 @@ class ClientTest < SeesawTest
       assert_equal 'test123', user.username
     end
   end
+
+  def test_decision
+    VCR.use_cassette 'client_decision' do
+      client = Seesaw::Client.new
+      decision = client.decision(5, 3276)
+      assert_equal 'Which lamp for the new apartment?', decision.question
+    end
+  end
 end
