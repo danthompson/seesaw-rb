@@ -10,7 +10,7 @@ gem 'rake'
 group :test do
   gem 'minitest'
   gem 'minitest-wscolor'
-  gem 'fakeweb'
+  gem 'webmock', require: 'webmock/minitest'
   gem 'vcr'
   gem 'mocha', require: 'mocha/setup'
 end

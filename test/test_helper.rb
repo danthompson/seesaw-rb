@@ -10,5 +10,11 @@ Dir["#{File.expand_path(File.dirname(__FILE__))}/support/*.rb"].each do |file|
   require file
 end
 
+# VCR
+VCR.configure do |c|
+  c.cassette_library_dir = 'test/cassettes'
+  c.hook_into :webmock
+end
+
 class SeesawTest < MiniTest::Unit::TestCase
 end
