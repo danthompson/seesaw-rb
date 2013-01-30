@@ -8,6 +8,8 @@ All networking is done with Net::HTTP so you don't have to worry about version c
 
 Read the [documentation](http://rubydoc.info/github/seesawco/seesaw-rb/master/frames) online.
 
+[![Build Status](https://magnum.travis-ci.com/seesawco/seesaw-rb.png?token=Gp8Aj3mKvmQYUbqse8vf&branch=master)](https://magnum.travis-ci.com/seesawco/seesaw-rb) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/seesawco/seesaw-rb)
+
 ## Installation
 
 Add this line to your application's Gemfile:
