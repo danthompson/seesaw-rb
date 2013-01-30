@@ -19,6 +19,17 @@ class DecisionsTest < Seesaw::TestCase
     end
   end
 
+  def test_publish_decision
+    VCR.use_cassette 'decisions/publish' do
+      client = local_client
+      decision = client.create_decision(1)
+      choice = create_test_choice(client, decision.user_id, decision.id)
+      result = client.publish_decision(decision.user_id, decision.id)
+      assert result.published_at
+      assert 1, result.choices.length
+    end
+  end
+
   def test_destroy_decision
     VCR.use_cassette 'decisions/destroy' do
       client = local_client
@@ -51,5 +62,17 @@ class DecisionsTest < Seesaw::TestCase
       assert client.flag_decision(decision.user_id, decision.id)
       assert client.unflag_decision(decision.user_id, decision.id)
     end
+  end
+
+  private
+
+  def create_test_choice(client, user_id, decision_id)
+    data = {
+      image_url: 'http://recess.s3.amazonaws.com/default_avatars/v1/photo_1.png',
+      subject: 'Test Image',
+      link_url: 'http://seesaw.co',
+      link_title: 'Seesaw'
+    }
+    client.create_choice_for_image(user_id, decision_id, data)
   end
 end

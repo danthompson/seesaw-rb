@@ -1,0 +1,129 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5000/v1/users/1/decisions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer 9774e653f7b3c1de5f21b61adc08ba24
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"9d35cef068c5a692da9a0ea4ede9fa9b"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b0be335fefdb61904e6afb9dd6c7404d
+      X-Runtime:
+      - '0.029169'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.0 codename Knife
+    body:
+      encoding: US-ASCII
+      string: ! '{"created_at":"2013-01-30T21:14:26Z","final_vote_id":null,"flag_count":null,"id":19,"is_private":false,"meta":null,"published_at":null,"question":null,"updated_at":"2013-01-30T21:14:26Z","user_id":1,"pusher_channel":"decision-1-19","timeline_key":"1,19","analytics":{"views":0,"unique_viewers":0,"referrers":{},"votes":{},"total_votes":0},"user_vote":null,"choices":[],"invitations":[],"user":{"biography":null,"created_at":"2013-01-23T03:22:06Z","family_name":null,"given_name":null,"id":1,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-23T03:22:06Z","username":null,"website":null,"avatar_url":"https://recess-dev.s3.amazonaws.com/default_avatars/v1/photo_1.png","full_name":"1","short_name":"1","display_name":"1","short_display_name":"1","analytics":{"votes":0,"decisions":0,"followers":0,"following":0}},"slug":"d/0P082U"}'
+    http_version: 
+  recorded_at: Wed, 30 Jan 2013 21:14:26 GMT
+- request:
+    method: post
+    uri: http://localhost:5000/v1/users/1/decisions/19/choices
+    body:
+      encoding: UTF-8
+      string: ! '{"choice":{"type":"image","image_url":"http://recess.s3.amazonaws.com/default_avatars/v1/photo_1.png","subject":"Test
+        Image","meta":{"link_url":"http://seesaw.co","link_title":"Seesaw"}}}'
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer 9774e653f7b3c1de5f21b61adc08ba24
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"c1256483f06b02a3c567ecf9cf966b56"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 03389d778dc363d3d7fa08c3dd66765b
+      X-Runtime:
+      - '0.261910'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.0 codename Knife
+    body:
+      encoding: US-ASCII
+      string: ! '{"created_at":"2013-01-30T21:14:26Z","decision_id":19,"decision_user_id":1,"id":7,"meta":{"link_url":"http://seesaw.co","link_title":"Seesaw"},"position":1,"subject":"Test
+        Image","type":"ImageChoice","updated_at":"2013-01-30T21:14:26Z","image_uri":"https://recess-dev.s3.amazonaws.com/gotwalt-pro.sf.gotwalt.com/decisions/19/7/1359580466/photo.png"}'
+    http_version: 
+  recorded_at: Wed, 30 Jan 2013 21:14:26 GMT
+- request:
+    method: post
+    uri: http://localhost:5000/v1/users/1/decisions/19/publish
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer 9774e653f7b3c1de5f21b61adc08ba24
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"f3af05643c5f3efcb05caf7c2ab86c77"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ca4ec80f48e64e67ea6627a8f9f5500d
+      X-Runtime:
+      - '0.097078'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.0 codename Knife
+    body:
+      encoding: US-ASCII
+      string: ! '{"created_at":"2013-01-30T21:14:26Z","final_vote_id":null,"flag_count":null,"id":19,"is_private":false,"meta":{"is_binary":true},"published_at":"2013-01-30T21:14:26Z","question":null,"updated_at":"2013-01-30T21:14:26Z","user_id":1,"pusher_channel":"decision-1-19","timeline_key":"1,19","analytics":{"views":0,"unique_viewers":0,"referrers":{},"votes":{},"total_votes":0},"user_vote":null,"choices":[{"created_at":"2013-01-30T21:14:26Z","decision_id":19,"decision_user_id":1,"id":7,"meta":{"link_url":"http://seesaw.co","link_title":"Seesaw"},"position":1,"subject":"Test
+        Image","type":"ImageChoice","updated_at":"2013-01-30T21:14:26Z","image_uri":"https://recess-dev.s3.amazonaws.com/gotwalt-pro.sf.gotwalt.com/decisions/19/7/1359580466/photo.png"},{"created_at":"2013-01-30T21:14:26Z","decision_id":19,"decision_user_id":1,"id":8,"meta":null,"position":2,"subject":null,"type":"NoChoice","updated_at":"2013-01-30T21:14:26Z"}],"invitations":[],"user":{"biography":null,"created_at":"2013-01-23T03:22:06Z","family_name":null,"given_name":null,"id":1,"meta":null,"moderated_decisions_count":null,"updated_at":"2013-01-23T03:22:06Z","username":null,"website":null,"avatar_url":"https://recess-dev.s3.amazonaws.com/default_avatars/v1/photo_1.png","full_name":"1","short_name":"1","display_name":"1","short_display_name":"1","analytics":{"votes":0,"decisions":0,"followers":0,"following":0}},"slug":"d/0P082U"}'
+    http_version: 
+  recorded_at: Wed, 30 Jan 2013 21:14:26 GMT
+recorded_with: VCR 2.4.0
