@@ -6,6 +6,8 @@ A Ruby gem for working with the Seesaw API.
 
 All networking is done with Net::HTTP so you don't have to worry about version conflicts with whatever library you may be using.
 
+Read the [documentation](http://rubydoc.info/github/seesawco/seesaw-rb/master/frames) online.
+
 ## Installation
 
 Add this line to your application's Gemfile:
