@@ -1,5 +1,7 @@
 # Seesaw
 
+*Note: this is currently unreleased.*
+
 A Ruby gem for working with the Seesaw API.
 
 All networking is done with Net::HTTP so you don't have to worry about version conflicts with whatever library you may be using.
@@ -9,16 +11,12 @@ All networking is done with Net::HTTP so you don't have to worry about version c
 Add this line to your application's Gemfile:
 
 ``` ruby
-gem 'seesaw'
+gem 'seesaw', github: 'seesawco/seesaw-rb'
 ```
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install seesaw
 
 ## Usage
 
