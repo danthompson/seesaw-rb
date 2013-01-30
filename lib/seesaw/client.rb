@@ -7,6 +7,7 @@ require 'hashie'
 require 'seesaw/client/users'
 require 'seesaw/client/decisions'
 require 'seesaw/client/slugs'
+require 'seesaw/client/timelines'
 require 'seesaw/client/choices'
 
 module Seesaw
@@ -14,6 +15,7 @@ module Seesaw
     include Seesaw::Client::Decisions
     include Seesaw::Client::Users
     include Seesaw::Client::Slugs
+    include Seesaw::Client::Timelines
     include Seesaw::Client::Choices
 
     attr_reader :access_token
@@ -86,7 +88,11 @@ module Seesaw
       response = request(*args)
 
       # Parse
-      Hashie::Mash.new MultiJson.load(response.body)
+      object = MultiJson.load(response.body)
+      return Hashie::Mash.new(object) if object.is_a? Hash
+      return object.map { |h| Hashie::Mash.new(h) } if object.is_a? Array
+
+      object
     end
 
     def boolean_from_response(*args)

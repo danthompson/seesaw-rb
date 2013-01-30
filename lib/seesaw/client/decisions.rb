@@ -76,7 +76,6 @@ module Seesaw
       def unflag_decision(user_id, decision_id)
         boolean_from_response :post, "users/#{user_id}/decisions/#{decision_id}/unflag"
       end
-
     end
   end
 end

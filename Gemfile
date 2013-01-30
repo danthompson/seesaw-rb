@@ -4,7 +4,11 @@ source 'https://rubygems.org'
 gemspec
 
 # Development dependencies
-gem 'rake'
+group :development do
+  gem 'rake'
+  gem 'yard'
+  gem 'redcarpet'
+end
 
 # Testing dependencies
 group :test do
@@ -13,4 +17,5 @@ group :test do
   gem 'webmock', require: 'webmock/minitest'
   gem 'vcr'
   gem 'mocha', require: 'mocha/setup'
+  gem 'simplecov', require: false
 end

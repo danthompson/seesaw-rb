@@ -6,6 +6,8 @@ A Ruby gem for working with the Seesaw API.
 
 All networking is done with Net::HTTP so you don't have to worry about version conflicts with whatever library you may be using.
 
+Read the [documentation](http://rubydoc.info/github/seesawco/seesaw-rb/master/frames) online.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -25,7 +27,7 @@ A client takes an optional access token when you initialize it. If you don't pro
 ``` ruby
 > client = Seesaw::Client.new(access_token: 'your_access_token')
 > current_user = client.me
-> me.username
+> current_user.username
 #=> "soffes"
 > decision = client.decision(5, 3276)
 #=> "Which lamp for the new apartment?"
@@ -36,8 +38,4 @@ A client takes an optional access token when you initialize it. If you don't pro
 
 ## Contributing
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+See the [contributing guide](https://github.com/seesawco/seesaw-rb/blob/master/Contributing.markdown).
