@@ -8,6 +8,7 @@ require 'seesaw/client/users'
 require 'seesaw/client/decisions'
 require 'seesaw/client/slugs'
 require 'seesaw/client/timelines'
+require 'seesaw/client/choices'
 
 module Seesaw
   class Client
@@ -15,6 +16,7 @@ module Seesaw
     include Seesaw::Client::Users
     include Seesaw::Client::Slugs
     include Seesaw::Client::Timelines
+    include Seesaw::Client::Choices
 
     attr_reader :access_token
     attr_reader :api_scheme
@@ -68,7 +70,9 @@ module Seesaw
       end
 
       request['Authorization'] = "Bearer #{self.access_token}" if authenticated?
-      request.set_form_data(params) if method == :post and params
+      request['Content-Type'] = 'application/json'
+
+      request.body = MultiJson.dump(params) if method == :post and params
 
       # Request
       response = http.request(request)

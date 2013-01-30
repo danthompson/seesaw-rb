@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/v1/users/3/decisions/12/choices/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer 9774e653f7b3c1de5f21b61adc08ba24
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"94b34b781a91163f7d41fa5615f2fe40"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9b6ef966af15c08ead723367926ca7e0
+      X-Runtime:
+      - '0.531474'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.0 codename Knife
+    body:
+      encoding: US-ASCII
+      string: ! '{"created_at":"2013-01-30T19:38:57Z","decision_id":12,"decision_user_id":3,"id":1,"meta":null,"position":1,"subject":null,"type":"ImageChoice","updated_at":"2013-01-30T19:38:57Z","image_uri":"https://test.s3.amazonaws.com/uploads/1359574716/1/image_1.jpg"}'
+    http_version: 
+  recorded_at: Wed, 30 Jan 2013 19:41:33 GMT
+recorded_with: VCR 2.4.0
