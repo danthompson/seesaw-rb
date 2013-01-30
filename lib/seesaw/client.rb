@@ -100,11 +100,16 @@ module Seesaw
       # Preform request
       response = request(*args)
 
-      # Parse
+      # Parse JSON
       object = MultiJson.load(response.body)
+
+      # Hash
       return Hashie::Mash.new(object) if object.is_a? Hash
+
+      # Array
       return object.map { |h| Hashie::Mash.new(h) } if object.is_a? Array
 
+      # Fallback incase it's not a hash or array
       object
     end
 
