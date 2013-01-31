@@ -8,7 +8,7 @@ All networking is done with Net::HTTP so you don't have to worry about version c
 
 Read the [documentation](http://rubydoc.info/github/seesawco/seesaw-rb/master/frames) online.
 
-[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/seesawco/seesaw-rb)
+[![Build Status](https://travis-ci.org/seesawco/seesaw-rb.png?branch=master)](https://travis-ci.org/seesawco/seesaw-rb) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/seesawco/seesaw-rb)
 
 ## Installation
 
