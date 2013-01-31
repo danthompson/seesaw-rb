@@ -23,7 +23,7 @@ class DecisionsTest < Seesaw::TestCase
       client = local_client
       decision = client.create_decision(1)
       choice = create_test_choice(client, decision.user_id, decision.id)
-      result = client.publish_decision(decision.user_id, decision.id)
+      result = client.publish_decision(decision.user_id, decision.id, question: 'Why is the sky blue?')
       assert result.published_at
       assert 1, result.choices.length
     end

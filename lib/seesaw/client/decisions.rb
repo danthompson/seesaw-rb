@@ -27,11 +27,20 @@ module Seesaw
       #
       # @param user_id [Numeric] The decision's user id
       # @param decision_id [Numeric] The decision's id
+      # @param options [Hash] Decision options
+      # @option options [String] :question The question for the decision
+      # @option options [Numeric] :latitude Latitude
+      # @option options [Numeric] :longitude Longitude
+      # @option options [Hash] :choice_attributes Additional attributes for decision choices
       # @return [Hashie::Mash]
       # @example
-      #   Seesaw.publish_decision(1, 1)
-      def publish_decision(user_id, decision_id)
-        post "users/#{user_id}/decisions/#{decision_id}/publish"
+      #   Seesaw.publish_decision(1, 1, question: 'Why is the sky blue?')
+      def publish_decision(user_id, decision_id, options = {})
+        decision_options = {
+          decision: options
+        }
+
+        post "users/#{user_id}/decisions/#{decision_id}/publish", decision_options
       end
 
       # Destroy a decision
