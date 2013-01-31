@@ -72,23 +72,15 @@ module Seesaw
     end
 
     def request(method, path, params = nil)
-      # Request
-      uri = URI.parse("#{self.base_url}#{path}")
-      request = case method
-        when :get
-          Net::HTTP::Get.new(uri.request_uri)
-        when :post
-          Net::HTTP::Post.new(uri.request_uri)
-        when :put
-          Net::HTTP::Put.new(uri.request_uri)
-        when :delete
-          Net::HTTP::Delete.new(uri.request_uri)
-      end
+      # Build request
+      request = build_request(method, URI.parse("#{self.base_url}#{path}"))
 
+      # Add headers
       request['Authorization'] = "Bearer #{self.access_token}" if authenticated?
       request['X-Seesaw-Client-Token'] = @client_token if @client_token
       request['Content-Type'] = 'application/json'
 
+      # Add params as JSON if they exist
       request.body = MultiJson.dump(params) if method == :post and params
 
       # Request
@@ -99,6 +91,19 @@ module Seesaw
 
       # Return the raw response object
       response
+    end
+
+    def build_request(method, uri)
+      case method
+        when :get
+          Net::HTTP::Get.new(uri.request_uri)
+        when :post
+          Net::HTTP::Post.new(uri.request_uri)
+        when :put
+          Net::HTTP::Put.new(uri.request_uri)
+        when :delete
+          Net::HTTP::Delete.new(uri.request_uri)
+      end
     end
 
     def handle_error(response)
