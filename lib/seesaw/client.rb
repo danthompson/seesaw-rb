@@ -28,7 +28,7 @@ module Seesaw
 
     # Initialize a new client.
     #
-    # @param options [Hash] optionally specify `:access_token`, `:api_scheme`, `:api_host`, or `:api_version`
+    # @param options [Hash] optionally specify `:access_token`, `:api_scheme`, `:api_host`, `:api_version`, or `:client_token`
     def initialize(options = {})
       options = { access_token: options } if options.is_a? String
 
@@ -36,6 +36,7 @@ module Seesaw
       @api_scheme = (options[:api_scheme] or 'https')
       @api_host = (options[:api_host] or 'api.seesaw.co')
       @api_version = (options[:api_version] or 1)
+      @client_token = options[:client_token] if options[:client_token]
     end
 
     # API base URL.
@@ -85,6 +86,7 @@ module Seesaw
       end
 
       request['Authorization'] = "Bearer #{self.access_token}" if authenticated?
+      request['X-Seesaw-Client-Token'] = @client_token if @client_token
       request['Content-Type'] = 'application/json'
 
       request.body = MultiJson.dump(params) if method == :post and params
@@ -93,17 +95,25 @@ module Seesaw
       response = http.request(request)
 
       # Check for errors
-      error = Seesaw::ERROR_MAP[response.code.to_i]
-      if error
-        message = nil
-        begin
-          message = MultiJson.load(response.body)['error_description']
-        rescue MultiJson::DecodeError => e
-        end
-        raise error.new(message)
+      handle_error(response)
+
+      # Return the raw response object
+      response
+    end
+
+    def handle_error(response)
+      # Find error or return
+      return unless error = Seesaw::ERROR_MAP[response.code.to_i]
+
+      # Try to add a useful message
+      message = nil
+      begin
+        message = MultiJson.load(response.body)['error_description']
+      rescue MultiJson::DecodeError => e
       end
 
-      response
+      # Raise error
+      raise error.new(message)
     end
 
     def json_request(*args)
